@@ -1,0 +1,137 @@
+Hook methods -
+	Pessoa
+		PessoaFisica
+			CadastroUsuario
+		PessoaJuridica
+			CadastroLoja
+
+	Produto
+		ProdutoDuravel
+			CadastroProdutoDuravel
+		ProdutoNaoDuravel
+			CadastroProdutoNaoDuravel
+	
+	InterfaceUsuarioDAO
+		UsuarioDAO
+			LojaDAO
+			ClienteDAO
+			
+Nullobjects - 
+	ProdutoCarrinhoDAO
+		verificaProdutoCarrinho
+			produtoCarrinhoNull
+			produtoCarrinho
+			
+Observer - 
+	Usuario
+		SeguirLoja
+		MandarMensagemLoja
+	Loja
+		NotificaNovoProduto
+		
+State -
+	CompraProduto
+		VerificaCartaoCliente
+			Usuario
+				CartaoCliente
+					CartaoLiberado
+					CartaoBloqueado
+
+Strategy -
+	InterfaceValorCompra
+		UsuarioCompraCartao
+			UsuarioPremium
+				NaoPagaFrete
+				DescontoMaiorProduto	
+			UsuarioComum
+				NaoPagaFrete
+				DescontoMenorProduto
+		UsuarioCompraSemCartao
+			UsuarioPremium
+				PagaFrete
+				DescontoMenorProduto
+			UsuarioComum
+				PagaFrete
+				SemDescontoProduto
+				
+Bridge -
+	InterfaceValorCompra
+		ValorCompraCartao
+		ValorCompraSemCartao
+	Compra(Abstrata)
+		CompraProduto
+
+Composite -
+	Produto
+		ProdutoDuravel
+		ProdutoNaoDuravel
+		KitProduto
+	
+Chain resposability -
+	AnalisadorLogin
+		AnalisadorClientes
+		AnalisadorLojas
+		AnalisadorError
+
+Proxy -
+	InterfaceUsuarioDAO
+		UsuarioDAOProxy
+
+Decorator -
+	InterfaceCarrinhoDAO
+		CarrinhoDAO
+		CarrinhoDAODecorator
+
+Static factory method -
+	Pessoa
+		UsuarioLogado
+
+Singleton -
+	Pessoa
+		UsuarioLogado
+
+Fluent interfaces -
+	Pessoa
+		PessoaFisica
+		PessoaJuridica
+		
+Command Pattern -
+	InterfaceComandoCompra
+		ComprarProdutoLoja
+		ComprarProdutoCarrinho
+	ExecutorCompra
+	
+Double dispatch pattern -
+	Historico
+	InterfaceHistoricoDAO
+		HistoricoDAO
+	Compra
+	
+Facade -
+	InterfaceValorCompra
+		ValorCompraCartao
+		ValorCompraSemCartao
+	ValorCompraFactory
+	CalcularValorCompra
+
+Flyweight -
+	InterfaceValorCompra
+		ValorCompraCartao
+		ValorCompraSemCartao
+	ValorCompraFactory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
